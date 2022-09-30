@@ -3,11 +3,11 @@ Angular Single Page Application, which filters destinations from server's API, b
 
 Technologies:
 
-HTML5
-CSS3
-SCSS
-JavaScript
-TypeScript
-Angular
-Angular Material
-RxJS
+- HTML5
+- CSS3
+- SCSS
+- JavaScript
+- TypeScript
+- Angular
+- Angular Material
+- RxJS
