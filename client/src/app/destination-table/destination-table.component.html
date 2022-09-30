@@ -1,0 +1,31 @@
+<div *ngIf="isSearchButtonClicked && destinations.length > 0">
+    <table (matSortChange)="sortDestinations($event)" [dataSource]="destinations" mat-table matSort
+           matSortDisableClear="true">
+        <!-- Country Column -->
+        <ng-container matColumnDef="country">
+            <th *matHeaderCellDef mat-header-cell> Country</th>
+            <td *matCellDef="let destination" mat-cell> {{destination.country.name}} </td>
+        </ng-container>
+
+        <!-- Season Column -->
+        <ng-container matColumnDef="season">
+            <th *matHeaderCellDef mat-header-cell> Season</th>
+            <td *matCellDef="let destination" mat-cell> {{destination.weather.season}} </td>
+        </ng-container>
+
+        <!-- Rating Column -->
+        <ng-container matColumnDef="rating">
+            <th *matHeaderCellDef mat-header-cell mat-sort-header="rating" sortActionDescription="Sort by rating">
+                Rating
+            </th>
+            <td *matCellDef="let destination" mat-cell> {{destination.rating}} </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+</div>
+
+<span *ngIf="isSearchButtonClicked && destinations.length === 0">
+    NO DESTINATIONS!
+</span>

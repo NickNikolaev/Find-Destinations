@@ -1,0 +1,70 @@
+div.destination-container {
+  height: 100vh;
+  width: 50vw;
+  margin: 0 auto;
+  padding: 0 3rem;
+  overflow: auto;
+}
+form.destination-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+form.destination-form > * {
+  margin: 1rem 0;
+}
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: cadetblue;
+}
+.mat-form-field :host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline:focus {
+  background-color: white;
+}
+:host ::ng-deep .mat-form-field-ripple {
+  background-color: cadetblue;
+}
+
+:host ::ng-deep .mat-select-value {
+  color: white;
+}
+
+:host ::ng-deep .mat-select-arrow {
+  color: white;
+}
+
+:host ::ng-deep .mat-form-field-label {
+  color: white;
+}
+:host ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: white;
+}
+:host ::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: white;
+}
+
+.season-list h3, .continent-list h3 {
+  color: cadetblue;
+}
+.season-list .mat-button-toggle-group, .continent-list .mat-button-toggle-group {
+  box-shadow: 0 0 15px -8px black;
+}
+.season-list .mat-button-toggle-group .mat-button-toggle, .continent-list .mat-button-toggle-group .mat-button-toggle {
+  color: white;
+  background-color: cadetblue;
+}
+.season-list .mat-button-toggle-group .mat-button-toggle ::ng-deep :hover, .continent-list .mat-button-toggle-group .mat-button-toggle ::ng-deep :hover {
+  background-color: rgb(104, 199, 223);
+}
+.season-list .mat-button-toggle-group .mat-button-toggle.mat-button-toggle-checked, .continent-list .mat-button-toggle-group .mat-button-toggle.mat-button-toggle-checked {
+  background-color: rgb(104, 199, 223);
+}
+
+.search-button-container {
+  width: 100%;
+  text-align: center;
+}
+.search-button-container button {
+  background-color: cadetblue;
+}
+
+/*# sourceMappingURL=app.component.css.map */

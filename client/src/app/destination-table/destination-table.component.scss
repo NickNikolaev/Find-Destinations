@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  overflow: hidden;
+}
+
+.destination-rating {
+  font-size: 14px;
+  color: yellow;
+  display: inline-block;
+  overflow: hidden;
+
+  &::before {
+    content: "★★★★★"
+  }
+}
+
+.error-message {
+  color: white;
+}

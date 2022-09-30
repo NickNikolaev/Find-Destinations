@@ -1,0 +1,62 @@
+<div class="destination-container">
+    <!-- Destination Form -->
+    <form #destinationForm="ngForm" (ngSubmit)="getDestinations()" class="destination-form">
+        <!-- Months -->
+        <mat-form-field appearance="fill">
+            <mat-label>Month</mat-label>
+            <mat-select [ngModel]="currentMonth" name="month">
+                <mat-option [value]="1">January</mat-option>
+                <mat-option [value]="2">February</mat-option>
+                <mat-option [value]="3">March</mat-option>
+                <mat-option [value]="4">April</mat-option>
+                <mat-option [value]="5">May</mat-option>
+                <mat-option [value]="6">June</mat-option>
+                <mat-option [value]="7">July</mat-option>
+                <mat-option [value]="8">August</mat-option>
+                <mat-option [value]="9">September</mat-option>
+                <mat-option [value]="10">October</mat-option>
+                <mat-option [value]="11">November</mat-option>
+                <mat-option [value]="12">December</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <!-- Seasons -->
+        <div class="season-list">
+            <h3>Select season/s</h3>
+            <mat-button-toggle-group #seasons="ngModel" aria-label="Seasons" multiple name="seasons" ngModel>
+                <mat-button-toggle value="spring">Spring</mat-button-toggle>
+                <mat-button-toggle value="summer">Summer</mat-button-toggle>
+                <mat-button-toggle value="autumn">Autumn</mat-button-toggle>
+                <mat-button-toggle value="winter">Winter</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+
+        <!-- Continents -->
+        <div class="continent-list">
+            <h3>Select continent/s</h3>
+            <mat-button-toggle-group #continents="ngModel" aria-label="Continents" multiple
+                                     name="continents" ngModel>
+                <mat-button-toggle value="NA">North America</mat-button-toggle>
+                <mat-button-toggle value="SA">South America</mat-button-toggle>
+                <mat-button-toggle value="EU">Europe</mat-button-toggle>
+                <mat-button-toggle value="AF">Africa</mat-button-toggle>
+                <mat-button-toggle value="AS">Asia</mat-button-toggle>
+                <mat-button-toggle value="AU">Australia</mat-button-toggle>
+                <mat-button-toggle value="AN">Antarctica</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+
+        <!-- Search Button -->
+        <div class="search-button-container">
+            <button aria-label="Find button" color="primary" mat-fab type="submit">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </form>
+
+    <!-- Destination Table -->
+    <app-destination-table [destinations]="destinations"></app-destination-table>
+
+    <!-- Loader -->
+    <app-loader></app-loader>
+</div>

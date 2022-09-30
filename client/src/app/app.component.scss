@@ -1,0 +1,93 @@
+// Destination Container
+div.destination-container {
+  height: 100vh;
+  width: 50vw;
+  margin: 0 auto;
+  padding: 0 3rem;
+  overflow: auto;
+
+  // Destination Form
+  @at-root form.destination-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    & > * {
+      margin: 1rem 0;
+    }
+
+    // Select Month
+    @at-root .mat-form-field {
+      :host ::ng-deep &-appearance-fill &-flex {
+        background-color: cadetblue;
+      }
+
+      :host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline:focus {
+        background-color: white;
+      }
+
+      @at-root :host ::ng-deep &-ripple {
+        background-color: cadetblue;
+      }
+
+      mat-select {
+        @at-root :host ::ng-deep .mat-select-value {
+          color: white;
+        }
+
+        @at-root :host ::ng-deep .mat-select-arrow {
+          color: white;
+        }
+      }
+
+      :host ::ng-deep &-label {
+        color: white;
+      }
+
+      :host ::ng-deep &.mat-focused &-label {
+        color: white;
+      }
+
+      :host ::ng-deep &.mat-focused.mat-primary .mat-select-arrow {
+        color: white;
+      }
+    }
+
+    // Seasons and Continents List
+    @at-root .season-list, .continent-list {
+      h3 {
+        color: cadetblue;
+      }
+
+      .mat-button-toggle-group {
+        box-shadow: 0 0 15px -8px black;
+
+        .mat-button-toggle {
+          color: white;
+          background-color: cadetblue;
+
+          ::ng-deep :hover {
+            background-color: rgba(104, 199, 223, 255);
+          }
+
+          &.mat-button-toggle-checked {
+            background-color: rgba(104, 199, 223, 255);
+          }
+        }
+      }
+
+    }
+
+    // Search Button
+    @at-root .search-button-container {
+      width: 100%;
+      text-align: center;
+
+      button {
+        background-color: cadetblue;
+      }
+    }
+  }
+}
+
